@@ -21,7 +21,7 @@ def directors_totals(nds)
 director_index = 0
 while director_index < nds.length do
 name = nds[director_index][:name]
-result[name] = gross_for_director(nds)
+result[name] = gross_for_director(nds[director_index])
   director_index += 1
 end
 result
@@ -31,9 +31,18 @@ end
 # using director_data as input
 
 #within directors_database:
-# :name 
+# [
+# {:name 
 #   :movies 
 #    { :title 
 #     :studio
 #     :worldwide_gross
 #     :release_year}
+# }
+# {:name 
+#   :movies 
+#    { :title 
+#     :studio
+#     :worldwide_gross
+#     :release_year}
+# } ...]
