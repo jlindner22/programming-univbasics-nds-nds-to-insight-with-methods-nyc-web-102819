@@ -20,11 +20,9 @@ def directors_totals(nds)
   result = {}
 director_index = 0
 while director_index < nds.length do
-#going through the list of directors and listing key/value pair
 name = nds[director_index][:name]
-movies = nds[director_index][:movies]
-
-   # result[name] = grand_total
+total = gross_for_director(nds)
+   result[name] = total
   director_index += 1
 end
 result
